@@ -47,14 +47,6 @@ func (p *parser) parse() {
 	}
 }
 
-func reverse(s string) string {
-	r := []rune(s)
-	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
-		r[i], r[j] = r[j], r[i]
-	}
-	return string(r)
-}
-
 type itemKind int
 
 const (
@@ -109,9 +101,6 @@ type lexer struct {
 // emit sends a item over the channel so the parser can collect and manage
 // each segment.
 func (l *lexer) emit(k itemKind) {
-
-	// fmt.Printf("%d %d %d\n", l.start, l.position, len(l.input))
-
 	accumulation := l.input[l.start:l.position]
 
 	i := item{
