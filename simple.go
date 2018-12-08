@@ -1,4 +1,3 @@
-// Package
 package parserlexer
 
 // ParseSimple is a simple routine to preserve whitespace while reversing the
