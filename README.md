@@ -22,7 +22,7 @@ result := SimpleParser("a string      value")
 The lexing and parsing solution is superior to the simple function and will
 demonstrate it's value as requirements continue to change. For example, if we
 needed to modify the program to change punctuation, or omit consonants the
-state functions `stateFn` approach will proove easy to reason about and 
+state functions `stateFn` approach will prove easy to reason about and 
 maintain over time.
  
 The technique was borrowed from one that can be found in the Go standard library.
