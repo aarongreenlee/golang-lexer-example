@@ -19,10 +19,8 @@ result := SimpleParser("a string      value")
 
 ## Performance Differences
 
+The following benchmarks were run on a 2014 MacBook Pro:
 ```
-// BenchmarkSimpleParser benchmarks the simple parser function which resulted in
-// the following results on a 2014 MacBook Pro:
-//
 // BenchmarkSimpleParser-8   1000000     1119 ns/op     384 B/op     22 allocs/op
 // BenchmarkParse-8          200000      6360 ns/op     561 B/op     19 allocs/op
 ```
