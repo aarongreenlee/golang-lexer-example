@@ -8,8 +8,6 @@ import (
 )
 
 func Parse(text string) (string, error) {
-	fmt.Printf("partsing: %q\n", text)
-
 	p := parser{
 		lex: lex(text),
 	}
@@ -45,8 +43,6 @@ func (p *parser) parse() {
 
 		case itemWhiteSpace:
 			sb.WriteString(item.value)
-		default:
-			fmt.Printf("unknown type %q", item.kind)
 		}
 	}
 }
@@ -117,8 +113,6 @@ func (l *lexer) emit(k itemKind) {
 	// fmt.Printf("%d %d %d\n", l.start, l.position, len(l.input))
 
 	accumulation := l.input[l.start:l.position]
-
-	fmt.Printf("emitting %q\n", accumulation)
 
 	i := item{
 		position: l.start,
